@@ -23,7 +23,15 @@ class _JogoState extends State<Jogo> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
           ),
-          Image.asset("images/padrao.png"),
+          GestureDetector(
+            onTap: () {
+              print("Imagem clicada!");
+            },
+            onDoubleTap: () {
+              print("Clicou duas vezes");
+            },
+            child: Image.asset("images/padrao.png"),
+          ),
           Padding(
             padding: EdgeInsets.only(top: 32, bottom: 16),
             child: Text(
